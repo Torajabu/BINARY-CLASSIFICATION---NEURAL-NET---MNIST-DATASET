@@ -1,74 +1,89 @@
-MNIST Binary Classification (0 vs 1)
-This repository contains a project for binary classification of MNIST digits, specifically distinguishing between digits 0 and 1. The project includes training a neural network using TensorFlow and implementing a custom neural network using Numpy for comparison.
+# Binary Classification Neural Network - MNIST Dataset
 
-Table of Contents
-Introduction
+This project implements a simple binary classification neural network to distinguish between the digits **0** and **1** from the MNIST dataset. The model achieves excellent accuracy and low loss on both the training and validation sets, demonstrating its effectiveness in the task.
 
-Dataset
+## Table of Contents
 
-Model
+- [Overview](#overview)
+- [Dataset](#dataset)
+- [Model Architecture](#model-architecture)
+- [Results](#results)
+- [Usage](#usage)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-Custom Neural Network
+---
 
-Usage
+## Overview
 
-Results
+The project showcases a binary classification model built using TensorFlow and Keras. It includes custom implementations of the dense layer and sequential model functionality to predict the digit labels using NumPy, alongside TensorFlow’s model predictions.
 
-Requirements
+## Dataset
 
-Acknowledgments
+The MNIST dataset is used, but filtered to include only samples for the digits **0** and **1**:
+- **Training Set**: Filtered subset of the original training data.
+- **Test Set**: Filtered subset of the original test data.
 
-Introduction
-This project aims to classify MNIST digits (0 and 1) using a neural network implemented in TensorFlow and a custom neural network implemented in Numpy. The project provides a visual comparison of the predictions made by both models.
+Data is normalized to the range `[0, 1]` and reshaped to a flat vector for input into the neural network.
 
-Dataset
-The dataset used is the MNIST dataset, which consists of 28x28 grayscale images of handwritten digits. Only digits 0 and 1 are used for this binary classification task.
+## Model Architecture
 
-Model
-The TensorFlow model is a simple feedforward neural network with the following architecture:
+The neural network is built with the following layers:
 
-Input layer with 784 units
+1. **Input Layer**: 784 units (28 x 28 flattened image input)
+2. **Hidden Layer 1**: Dense layer with 128 units and ReLU activation
+3. **Hidden Layer 2**: Dense layer with 64 units and ReLU activation
+4. **Output Layer**: Dense layer with 1 unit and sigmoid activation for binary classification
 
-Hidden layer 1 with 128 units and ReLU activation
+## Results
 
-Hidden layer 2 with 64 units and ReLU activation
+For detailed results, visit the [results directory](https://github.com/Torajabu/BINARY-CLASSIFICATION---NEURAL-NET---MNIST-DATASET/tree/main/BINARY%20LASSIFICATION%20RESULTS%20NEURAL%20NET).
 
-Output layer with 1 unit and sigmoid activation
+### Metrics
+- **Accuracy**: The model achieves high accuracy on both training and validation sets.
+- **Loss**: Low binary cross-entropy loss indicates the model performs well in distinguishing between the digits **0** and **1**.
 
-Custom Neural Network
-A custom neural network is implemented using Numpy to mimic the TensorFlow model. The network uses the sigmoid activation function and consists of three layers.
+### Visualization
+The predictions from both TensorFlow’s model and the custom NumPy implementation are visualized for comparison.
 
-Usage
-To run the project, follow these steps:
+![Prediction Visualization](path/to/your/visualization.png)  
+*Above: Each subplot displays the true label, TensorFlow prediction, and custom NumPy prediction.*
 
-Clone this repository.
+## Usage
 
-Install the required libraries listed in the Requirements section.
+### Prerequisites
 
-Run the test.py script.
+Ensure the following Python libraries are installed:
+- TensorFlow
+- NumPy
+- Matplotlib
 
-bash
-git clone https://github.com/Torajabu/BINARY-CLASSIFICATION---NEURAL-NET---MNIST-DATASET
-cd https://github.com/Torajabu/BINARY-CLASSIFICATION---NEURAL-NET---MNIST-DATASET
-pip install -r requirements.txt
-python test.py
-Results
-The model achieves high accuracy in distinguishing between digits 0 and 1. The results are visualized using Matplotlib, showing predictions from both TensorFlow and the custom Numpy implementation.
+### Steps to Run
 
-Requirements
-Python 3.x
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Torajabu/BINARY-CLASSIFICATION---NEURAL-NET---MNIST-DATASET.git
+   cd BINARY-CLASSIFICATION---NEURAL-NET---MNIST-DATASET
+   ```
 
-TensorFlow
+2. Run the script:
+   ```bash
+   python binary_classification_mnist.py
+   ```
 
-Numpy
+3. Visualize the results:
+   - The script will display the results of predictions from both TensorFlow and the custom NumPy implementation.
 
-Matplotlib
+### Key Functions
+- **my_dense**: Custom implementation of a dense layer.
+- **my_sequential**: Custom implementation of a sequential model.
+- **sigmoid**: Sigmoid activation function.
 
-Install the requirements using pip:
+## License
 
-bash
-pip install tensorflow numpy matplotlib
-Acknowledgments
-The MNIST dataset is provided by Yann LeCun's website.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-TensorFlow and Numpy libraries for machine learning and numerical computations.
+## Acknowledgments
+
+Special thanks to the creators of the MNIST dataset for providing such an invaluable resource for machine learning and deep learning projects.
+
