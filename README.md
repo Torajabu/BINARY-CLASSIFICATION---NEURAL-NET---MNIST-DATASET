@@ -79,10 +79,6 @@ Ensure the following Python libraries are installed:
 - **my_sequential**: Custom implementation of a sequential model.
 - **sigmoid**: Sigmoid activation function.
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
 ## Acknowledgments
 
 Special thanks to the creators of the MNIST dataset for providing such an invaluable resource for machine learning and deep learning projects.
