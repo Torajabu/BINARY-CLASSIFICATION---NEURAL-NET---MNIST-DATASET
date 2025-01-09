@@ -43,11 +43,6 @@ For detailed results, visit the [results directory](https://github.com/Torajabu/
 - **Accuracy**: The model achieves high accuracy on both training and validation sets.
 - **Loss**: Low binary cross-entropy loss indicates the model performs well in distinguishing between the digits **0** and **1**.
 
-### Visualization
-The predictions from both TensorFlow’s model and the custom NumPy implementation are visualized for comparison.
-
-![Prediction Visualization](path/to/your/visualization.png)  
-*Above: Each subplot displays the true label, TensorFlow prediction, and custom NumPy prediction.*
 
 ## Usage
 
